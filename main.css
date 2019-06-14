@@ -1,0 +1,36 @@
+body {
+  background: #708d00;
+  margin: 0;
+  padding: 0;
+}
+.dark-bg {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+}
+.card {
+  background: #fff;
+  box-shadow: inset 200px 0 10px rgba(0, 0, 0, .5);
+  height: 400px;
+  transform-style: preserve-3d;
+  transform: perspective(1000px);
+  transition: .4s ease-in-out;
+  width: 300px;
+}
+.card:hover {
+    box-shadow: inset 0px 0 0px rgba(0, 0, 0, .5);
+}
+.img-box {
+  position: relative;
+  transform-origin: left;
+  transition: .4s ease-in-out;
+}
+img {
+  height: 400px;
+  object-fit: cover;
+  width: 100%;
+}
+.card:hover .img-box {
+  transform: rotateY(-135deg);
+}
